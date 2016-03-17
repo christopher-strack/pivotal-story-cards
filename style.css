@@ -1,0 +1,74 @@
+body
+{
+  margin: 20px;
+  font-family: "Helvetica Neue"
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #333;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 16pt;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.storycard {
+    margin: 1em;
+}
+
+.storydescription {
+    height: 170px;
+    overflow: hidden;
+    font-size: 11pt;
+    white-space: pre;
+    margin-bottom: 2em;
+}
+
+.storyestimate {
+    float: right;
+}
+
+.storylabel {
+    padding: 5px;
+    background-color: #efefef;
+    border-radius: 10px;
+    -webkit-print-color-adjust: exact;
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 0mm;
+    }
+
+    body
+    {
+      margin: 0px;
+    }
+
+    .page {
+        page-break-after: always;
+    }
+
+    .page:last-of-type {
+        page-break-after: auto
+    }
+}
